@@ -1,3 +1,5 @@
+//if anyone actually looks at this i am so sorry
+
 var current_div = 1;
 var seconds_played = 0;
 var current_string = "";
@@ -170,6 +172,10 @@ function parseKey(key_press, shift_key){
     //enter (submit)
     else if(key_press == 13){
         if(current_div == 1){
+            if(mode == "normal") $(".adn1").html("+5");
+            else{
+                    $(".adn1").html("+8");
+            }
             var correct_ans = false;
             if(current_operator1 == "+" && current_string == f_1 + l_1){
                 correct_ans = true;
@@ -214,8 +220,15 @@ function parseKey(key_press, shift_key){
                 score++;
                 $(".scoretext").html(score.toString());
             }
+            else{
+                $(".adn1").html("WRONG.");
+                $(".adn1").show();
+                $(".adn1").fadeIn(750);
+                $(".adn1").fadeOut(750);
+            }
         }
         else if(current_div == 2){
+            $(".adn2").html("+10");
             var correct_ans = false;
             if(current_operator2 == "+" && current_string == f_2 + l_2){
                 correct_ans = true;
@@ -259,8 +272,15 @@ function parseKey(key_press, shift_key){
                 score++;
                 $(".scoretext").html(score.toString());
             }
+            else{
+                $(".adn2").html("WRONG.");
+                $(".adn2").show();
+                $(".adn2").fadeIn(750);
+                $(".adn2").fadeOut(750);
+            }
         }
         else if(current_div == 3){
+            $(".adn3").html("+30");
             if($(".block3-problem").html() == current_string){
                 var t3 = parseInt($(".timer3").html());
                 t3+= 30;
@@ -277,10 +297,14 @@ function parseKey(key_press, shift_key){
                 $(".scoretext").html(score.toString());
             }
             else{
-                //make something red -- alert user somehow that he messed up
+                $(".adn3").html("WRONG.");
+                $(".adn3").show();
+                $(".adn3").fadeIn(750);
+                $(".adn3").fadeOut(750);
             }
         }
         else if(current_div == 4){
+            $(".adn4").html("+60");
             if($(".block4-problem").html() == current_string){
                 var index = Math.floor((Math.random() * long_texts.length));
                 var cs = long_texts[index];
@@ -298,7 +322,10 @@ function parseKey(key_press, shift_key){
                 $(".scoretext").html(score.toString());
             }
             else{
-                //make something red -- alert user somehow that he messed up
+                $(".adn4").html("WRONG.");
+                $(".adn4").show();
+                $(".adn4").fadeIn(750);
+                $(".adn4").fadeOut(750);
             }
         }
         current_string = "";

@@ -96,13 +96,14 @@ body::after {
 .heading {
     grid-row: 1/2;
     font-family: 'eliantoregular';
-    letter-spacing: 11px;
+    letter-spacing: 1px;
+    word-spacing: -10px;
 }
 
 h1 {
     margin: 0;
     padding-top: 10px;
-    font-size: 120px;
+    font-size: 90px;
     font-weight: bolder;
     color: #0a042c;
     text-align: center;
@@ -110,15 +111,15 @@ h1 {
 
 .heading2 {
     grid-row: 2/3;
-    font-family: 'eliantoregular';
-    word-spacing: -10px;
+    font-family: "Droid Serif";
+    word-spacing: 1px;
 }
 
 h2 {
     margin-top: 0;
     font-size: 50px;
     font-weight: bold;
-    color: #0a042c;
+    color: black;
     text-align: center;
 }
 
